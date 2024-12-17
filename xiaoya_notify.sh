@@ -354,7 +354,7 @@ function update_media() {
         fi
 
         INFO "设置目录权限..."
-        chmod 777 -R "${MEDIA_DIR}"/xiaoya
+        chmod -R 777 "${MEDIA_DIR}"/xiaoya
     elif [ "${1}" == "pikpak.mp4" ]; then
         extra_parameters="--workdir=/media/xiaoya"
 
@@ -370,7 +370,7 @@ function update_media() {
         fi
 
         INFO "设置目录权限..."
-        chmod 777 -R "${MEDIA_DIR}"/xiaoya
+        chmod -R 777 "${MEDIA_DIR}"/xiaoya
     elif [ "${1}" == "115.mp4" ]; then
         extra_parameters="--workdir=/media/xiaoya"
 
@@ -386,7 +386,7 @@ function update_media() {
         fi
 
         INFO "设置目录权限..."
-        chmod 777 -R "${MEDIA_DIR}"/xiaoya
+        chmod -R 777 "${MEDIA_DIR}"/xiaoya
     fi
 
     if docker container inspect "${RESILIO_NAME}" > /dev/null 2>&1; then
